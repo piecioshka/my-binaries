@@ -1,12 +1,15 @@
 CC      ?= cc
 CFLAGS  ?= -Wall -Wextra -O2
-BINDIR  := bin
+BINDIR  ?= bin
 
 .PHONY: all clean
 
 all: $(BINDIR)/timestamp
 
-$(BINDIR)/timestamp: $(BINDIR)/timestamp.c
+$(BINDIR):
+	mkdir -p $@
+
+$(BINDIR)/timestamp: $(BINDIR)/timestamp.c | $(BINDIR)
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:
