@@ -20,3 +20,7 @@ set -gx PATH $HOME/projects/my-binaries/bin/ $PATH
 ## Commands
 
 - `timestamp`: Print the current timestamp in seconds and nanoseconds.
+
+## License
+
+[The MIT License](http://piecioshka.mit-license.org) @ 2026
