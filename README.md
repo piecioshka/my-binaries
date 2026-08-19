@@ -21,6 +21,21 @@ set -gx PATH $HOME/projects/my-binaries/bin/ $PATH
 
 - `timestamp`: Print the current timestamp in seconds and nanoseconds.
 
+## Layout
+
+- `bin/` - the compiled commands, and the only directory that belongs on `PATH`
+- `src/` - the sources they are built from
+
+## Build
+
+Compiled binaries are committed, so cloning is enough to use them. Rebuild
+after changing a source:
+
+```bash
+make        # compiles src/*.c into bin/
+make clean  # removes the compiled binaries
+```
+
 ## License
 
 [The MIT License](https://piecioshka.mit-license.org) @ 2026
